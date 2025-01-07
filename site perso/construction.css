@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('chantier.jpg');
+    background-size: cover; /* Couvre tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: repeat; /* Évite la répétition de l'image */
+    margin: 5px; 
+    scroll-behavior: smooth;
+}
+.bandeau{
+    height: 100px; /* Hauteur du bandeau */
+    background: linear-gradient(90deg, #FFD700 50%, #000000 50%);
+    text-align: center;
+    color: red;
+    background-size: 200px 100%; /* Largeur des rayures */}

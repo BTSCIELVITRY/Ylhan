@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('fond2.jpg');
+    background-size: cover; /* Couvre tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: repeat; /* Évite la répétition de l'image */
+    margin: 5px; 
+    scroll-behavior: smooth;
+
+ /* Ajoute un peu d'espace à l'intérieur */
+border: 7px solid black; /* Définit la bordure */
+
+
+}
+ .bandeau h1{
+    background-color: #240442; /* Couleur de fond */
+    color: rgba(241, 0, 0, 0.979); /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    padding: 20px; /* Espacement interne */
+    width: 96.8%; /* Prendre toute la largeur */
+    font-weight:bold;
+    text-decoration: underline;
+    height: 25px;
+
+}
+table{
+    margin-left: 15%;
+}
+
+    
+    
+
+
+.video {
+    padding-right: 93%;         
+    margin-top: 1px;   
+    
+    
+}
+.mail {
+
+
+    margin-left: 50%;
+     
+    padding: 25px;
+    font-size: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+nav ul {
+  float: left;
+  list-style-type: none;
+  padding: 60px;
+  margin: 0;
+  background-color: transparent;
+  color: rgb(186, 28, 28);
+  font-size: 30px;
+}
+
+nav ul li {
+  position: relative; /* Changez de absolute à relative */
+  padding: 1px 100px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav ul li:hover {
+  background-color: transparent;
+  color: rgb(60, 36, 183);
+}
+
+nav ul ul {
+  display: none; /* Cacher le sous-menu par défaut */
+  position: absolute;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  min-width: 15px;
+}
+
+nav ul li:hover > ul {
+  display: block; /* Afficher le sous-menu au survol */
+}
+
+nav ul ul li {
+  padding: 10px 15px;
+  color: white;
+}
+
+nav ul ul li:hover {
+  text-decoration: none;
+  color: aqua;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(3, 36, 5);
+}
+
+#submenu {
+  background-color: transparent;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 1; /* Changez de 10 à 1 */
+  visibility: visible;
+}
+
+#menu ul > li:hover + #submenu,
+#submenu:hover {
+  display: block;
+  opacity: 1; /* Changez de 10 à 1 */
+  visibility: visible;
+}
+.phrase{
+  margin-left: 55%;
+}
+.bandeau2{
+  background-color: #240442; /* Couleur de fond */
+  color: rgba(241, 0, 0, 0.979); /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+  padding: 20px; /* Espacement interne */
+  width: 96.8%; /* Prendre toute la largeur */
+  font-weight:bold;
+  text-decoration: underline;
+  height: 25px;
+}
