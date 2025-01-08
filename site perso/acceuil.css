@@ -10,18 +10,20 @@ body {
 
  /* Ajoute un peu d'espace à l'intérieur */
 border: 7px solid black; /* Définit la bordure */
+border-radius: 15px; /* Rayon des coins arrondis */
+
 
 
 }
  .bandeau h1{
-    background-color: #240442; /* Couleur de fond */
-    color: rgba(241, 0, 0, 0.979); /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
-    padding: 20px; /* Espacement interne */
-    width: 96.8%; /* Prendre toute la largeur */
-    font-weight:bold;
-    text-decoration: underline;
-    height: 25px;
+  background-color: #240442; /* Couleur de fond */
+  color: rgba(241, 0, 0, 0.979); /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+  padding: 20px; /* Espacement interne */
+  width: 96.8%; /* Prendre toute la largeur */
+  font-weight:bold;
+  text-decoration: underline;
+  height: 25px;
 
 }
 table{
@@ -126,4 +128,8 @@ a {
   font-weight:bold;
   text-decoration: underline;
   height: 25px;
+}
+
+.image{
+  margin-left:22%;
 }

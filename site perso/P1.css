@@ -1,129 +1,115 @@
- h1 {
-       font-weight:bold;
-       text-decoration: underline;
-      color:#ef0f0f;
-    }
-
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('fond2.jpg');
-        background-size: cover; /* Couvre tout l'élément */
-        background-position: center; /* Centre l'image */
-        background-repeat: no-repeat; /* Évite la répétition de l'image */
-        margin: 5px; 
-    padding: 3px; /* Ajoute un peu d'espace à l'intérieur */
-    border: 5px solid black; /* Définit la bordure */
-    box-sizing: border-box; /* Inclut la bordure dans les dimensions */
-
-    }
-    .image{
-      background-image: repeat;
-    }
-    
-    .bandeau h1{
-        background-color: #035981; /* Couleur de fond */
-        color: rgba(255, 255, 255, 0.715); /* Couleur du texte */
-        text-align: center; /* Centrer le texte */
-        padding: 20px; /* Espacement interne */
-        position: relative; /* Positionnement */
-        top: 0; /* Positionner en haut */
-        width: 97,5%; /* Prendre toute la largeur */
-    }
-    .menu h2{
-    background-color: #05031f; /* Couleur de fond */
-    color: rgb(75, 7, 7); /* Couleur du texte */
-    width: 100px; /* Largeur du bandeau */
-    height: 100%; /* Hauteur du bandeau */  
-    top: 57; /* Positionne en haut */
-    right: 0; /* Positionne à gauche */
-    padding: 50px; /* Espacement interne */
-    position: fixed;
-}
-
-
-h3 {
-    text-decoration: underline;
-    font-size: 30px;
-}
-
-    
-
-  .bandeau h4{
-    background-color: #0c5180; /* Couleur de fond */
-    color: rgba(143, 139, 139, 0.715); /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
-    padding: 20px; /* Espacement interne */
-    position: relative; /* Positionnement */
-    top: 658; /* Positionner en haut */
-    width: 100%; /* Prendre toute la largeur */
-    text-decoration: underline;
-  }
-
-
-  .image-container {
-    overflow: hidden; /* Pour cacher l'image qui dépasse */
-}
-
-.image {
-    transition: transform 0.3s ease; /* Animation douce */
-}
-
-.image:hover {
-    transform: scale(1.2); /* Agrandit l'image à 120% */
-}
-h4{
- color:red; 
-}
-nav {
-  background-color: #333;
-}
-
-.menu {
-  list-style-type: none;
-  padding: 0;
+body {
   margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('fond2.jpg');
+  background-size: cover; /* Couvre tout l'élément */
+  background-position: center; /* Centre l'image */
+  background-repeat: repeat; /* Évite la répétition de l'image */
+  margin: 5px; 
+  scroll-behavior: smooth;
+
+/* Ajoute un peu d'espace à l'intérieur */
+border: 7px solid black; /* Définit la bordure */
+border-radius: 15px; /* Rayon des coins arrondis */
+
+
+
+}
+.bandeau h1{
+  background-color: #240442; /* Couleur de fond */
+  color: rgba(241, 0, 0, 0.979); /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+  padding: 20px; /* Espacement interne */
+  width: 96,8%; /* Prendre toute la largeur */
+  font-weight:bold;
+  text-decoration: underline;
+  height: 80px;
 }
 
-.menu > li {
-  float: left;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow-container {
   position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden; /* Cache les images qui débordent */
 }
 
-.menu > li > a {
-  display: block;
-  padding: 15px 20px;
+input[type="radio"] {
+  display: none; /* Cache les boutons radio */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease; /* ajoute l'effet de transition sur le coté*/
+}
+
+.slide {
+  min-width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-button {
+  cursor: pointer;
+  font-size: 24px;
   color: white;
-  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  user-select: none;
 }
 
-.menu > li:hover > a {
-  background-color: #555;
+#slide1:checked ~ .slides {
+  transform: translateX(0);
 }
 
-.sous-menu {
-  display: none; /* Masquer le sous-menu par défaut */
-  position: absolute; /* Positionner le sous-menu */
-  top: 100%; /* Le sous-menu apparaîtra juste en dessous du menu principal */
-  left: 0;
-  background-color: #333;
-  z-index: 1;
+#slide2:checked ~ .slides {
+  transform: translateX(-100%);
 }
 
-.sous-menu li {
-  float: none; /* Les éléments du sous-menu ne doivent pas être alignés horizontalement */
+#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+.bandeau_titre{
+  background-color: #480785; /* Couleur de fond */
+  color: rgba(0, 72, 241, 0.979); /* Couleur du texte */
+   padding: 20px; /* Espacement interne */
+  width: 50%; /* Prendre toute la largeur */
+  font-weight:bold;
+  text-decoration: underline;
+  height: 70px;
+  text-align: center;
+}
+.de20{
+  width: 200px; /* Largeur de la div */
+  height: 200px; /* Hauteur de la div */
+  float:right;
+  width:10%;
+  margin-top: 120px; /* Ajuste l'image vers le bas */
+  margin-right: 15px;
+  overflow: hidden; /* Évite que l'image agrandie déborde */
+  transition: transform 0.3s ease; /* Animation fluide */
 }
 
-.menu > li:hover .sous-menu {
-  display: block; /* Afficher le sous-menu au survol */
-}
-
-.sous-menu a {
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
-.sous-menu a:hover {
-  background-color: #555; /* Changer la couleur de fond au survol */
+.de20:hover {
+    transform: scale(1.2); /* Agrandit l'image de 20% */
 }

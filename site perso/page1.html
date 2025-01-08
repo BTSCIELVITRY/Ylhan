@@ -14,41 +14,89 @@
     <div class="bandeau">
         <h1> L'aléatoire dans les jeux </h1>
     </div>
-    <h3> Comment est codé l'aléatoire</h3>
-    <nav class="menu">                       
+    <br><br><br><br>
         
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Services</a>
-                    <ul class="sous-menu">
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 2</a></li>
-                        <li><a href="#">Service 3</a></li>
-                    </ul>
-                </li>
-               
-        </nav>
-                                    
-                               </span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                      </nav>
-                      <p3> On a plusieurs environnement ou on peut utiliser de l'aléatorie, les plus classiques sont : </p3>
-                      <ul>
-                        <li>Les dés</li>
-                        <li>Les cartes</li>
 
-                    </ul>
-                      <div class="bandeau"> </div>     
-                      <img src="cartes2.png" usemap="#image-map">
-                      <map name="image-map">
-                          <area shape="poly" coords="162,66,389,104,341,429,110,401" href="https://fr.wikipedia.org/wiki/Carte_%C3%A0_jouer"></area>
-                      </map>
-            <h4> L'aléatoire avec des dés</h4>
-            <div class="image-container">
-                <img src="des.jpg" alt="image de des" class="image">
-                </div>
-<a href="page2.html">  ma page 2</a>
+    <div class="slideshow-container">
+        <input type="radio" name="slides" id="slide1" checked>
+        <input type="radio" name="slides" id="slide2">
+        <input type="radio" name="slides" id="slide3">
+
+        <div class="slides">
+            <div class="slide">
+                <img src="carteslide.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="déslide.jpg" alt="Image 2">
+            </div>
+         
+         
+        </div>
+
+        <div class="navigation">
+            <label for="slide1" class="nav-button" onclick="document.getElementById('slide1').checked = true;">❮</label>
+            <label for="slide2" class="nav-button" onclick="document.getElementById('slide2').checked = true;">❯</label>
+           
+        </div>
+    </div>
+    <div class="bandeau_titre">
+<h2> Comment obtenir un nombre aléaoire ?</h2>
+</div>
+<p> Créer une fonction pour avoir un nombre aléatoire est très simple. Pour cela, il suffit de faire un petit programme, dans le cas si-dessous en python <br>  import random
+
+   <br>  # Générer un entier aléatoire entre 1 et 10 <br>
+    nombre_aleatoire = random.randint(1, 10) <br>
+    print(f"Nombre aléatoire: {nombre_aleatoire}") <br>
+    <br>
+    # Générer un nombre flottant aléatoire entre 0 et 1 <br>
+    nombre_flottant = random.random() <br>
+    print(f"Nombre flottant: {nombre_flottant}") 
+    <br><br>
+
+    On peut créer le meme algorithme avec beaucoup d'autre langage, comme le C, le Javascript, ou encore le C++ et le java. </p>
+
+    <div class="bandeau_titre" id="ancre-une">
+    <h3> l'aléatoire avec des dés</h3>
+    </div>
+    <div class="de20"> 
+        <img src="des20.jpg">
+        </div>
+
+    <p> Coder un dé est très similaire avec le code au-dessus, il faut simplement générer un nombre qui représente une face du dé (cela peut etre un dé à 6 faces, à 20 faces etc...) import random
+
+        <br>  <br>
+        de_6_faces = random.randint(1, 6) <br>
+        print(f"Résultat du lancer de dé à 6 faces : {de_6_faces}")
+        <br>
+         <br>
+          de_20_faces = random.randint(1, 20)          <br>
+          print(f"Résultat du lancer de dé à 20 faces : {de_20_faces}") <br> <br>
+        De plus, on peut lancer plusieurs dés à la fois <br>
+        nombre_de_des = 3 <br>
+        lancers = [random.randint(1, 6) for _ in range(nombre_de_des)] <br>
+        print(f"Résultats des {nombre_de_des} lancers : {lancers}") <br> 
+    </p>
+  
+
+    <div class="bandeau_titre" id="ancre-deux">
+    <h4> Une forme d'aléatoire plus complexe : avec des cartes </h4> 
+</div>
+<p> Pour créer un jeu de carte aléatoire, il faut prendre plus de point en compte. En effet, il faut d'abord donner une valeur à chaque carte, cela est compris entre 1 et 10 dans les jeux de carte classique, avec d'autre carte spécial comme le valet ou la dame. <br>
+Ensuite, il faut donner une couleur aux cartes pour les différencier. Il faut aussi être en capacité de mélanger le jeu pour que le résultat change à chaque simulation du code. 
+<br>import random <br>
+
+# Étape 1 : Créer un jeu de cartes <br>
+valeurs = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi', 'As'] <br>
+couleurs = ['Cœur', 'Carreau', 'Trèfle', 'Pique'] <br> 
+jeu_de_cartes = [f"{valeur} de {couleur}" for valeur in valeurs for couleur in couleurs] <br>
+
+# Étape 2 : Mélanger le jeu <br>
+random.shuffle(jeu_de_cartes) <br>
+
+# Étape 3 : Tirer une carte <br>
+carte_tiree = jeu_de_cartes.pop()  # Retire une carte du dessus du paquet <br>
+print(f"Carte tirée : {carte_tiree}") <br>
+print(f"Cartes restantes : {len(jeu_de_cartes)}")  </p>   
+</div>
 </body>
+</html>
